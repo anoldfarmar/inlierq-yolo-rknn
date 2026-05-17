@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Model and deployment artifacts
+# *.pt
+# *.pth
+# *.onnx
+# *.rknn
+# *.engine
+# *.tflite
+# *.pb
+# *.bin
+# *.param
+
+# Datasets, calibration images, and generated model folders
+data/
+dataset/
+datasets/
+images/
+labels/
+runs/
+outputs/
+results/
+spacerRKNNmodels/
+
+# Archives and large exports
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# RKNN calibration and debug outputs
+*.calib.txt
+*_debug/
+debug_outputs/
+dumps/
+
