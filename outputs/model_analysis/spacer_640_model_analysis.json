@@ -1,0 +1,5819 @@
+{
+  "model_path": "/home/paipaiqi01/workspace/rknnquantizationLearning/spacer_640.pt",
+  "environment": {
+    "torch": "2.12.0+cu130",
+    "ultralytics": "8.4.51",
+    "cuda_available": true,
+    "device": "cpu"
+  },
+  "summary": {
+    "total_modules": 454
+  },
+  "forward_output": [
+    {
+      "type": "Tensor",
+      "shape": [
+        1,
+        300,
+        6
+      ],
+      "dtype": "torch.float32",
+      "min": -46.80003356933594,
+      "max": 753.7049560546875
+    },
+    {
+      "one2many": {
+        "boxes": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            4,
+            8400
+          ],
+          "dtype": "torch.float32",
+          "min": 0.4577754735946655,
+          "max": 10.768367767333984
+        },
+        "scores": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            1,
+            8400
+          ],
+          "dtype": "torch.float32",
+          "min": -19.641719818115234,
+          "max": -3.090226173400879
+        },
+        "feats": [
+          {
+            "type": "Tensor",
+            "shape": [
+              1,
+              64,
+              80,
+              80
+            ],
+            "dtype": "torch.float32",
+            "min": -0.27846455574035645,
+            "max": 5.566335201263428
+          },
+          {
+            "type": "Tensor",
+            "shape": [
+              1,
+              128,
+              40,
+              40
+            ],
+            "dtype": "torch.float32",
+            "min": -0.27846455574035645,
+            "max": 5.753626823425293
+          },
+          {
+            "type": "Tensor",
+            "shape": [
+              1,
+              256,
+              20,
+              20
+            ],
+            "dtype": "torch.float32",
+            "min": -0.27846455574035645,
+            "max": 11.906808853149414
+          }
+        ]
+      },
+      "one2one": {
+        "boxes": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            4,
+            8400
+          ],
+          "dtype": "torch.float32",
+          "min": 0.2047930806875229,
+          "max": 10.6143159866333
+        },
+        "scores": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            1,
+            8400
+          ],
+          "dtype": "torch.float32",
+          "min": -20.24595832824707,
+          "max": -5.579802513122559
+        },
+        "feats": [
+          {
+            "type": "Tensor",
+            "shape": [
+              1,
+              64,
+              80,
+              80
+            ],
+            "dtype": "torch.float32",
+            "min": -0.27846455574035645,
+            "max": 5.566335201263428
+          },
+          {
+            "type": "Tensor",
+            "shape": [
+              1,
+              128,
+              40,
+              40
+            ],
+            "dtype": "torch.float32",
+            "min": -0.27846455574035645,
+            "max": 5.753626823425293
+          },
+          {
+            "type": "Tensor",
+            "shape": [
+              1,
+              256,
+              20,
+              20
+            ],
+            "dtype": "torch.float32",
+            "min": -0.27846455574035645,
+            "max": 11.906808853149414
+          }
+        ]
+      }
+    }
+  ],
+  "target_layers": [
+    {
+      "name": "model.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        3,
+        3,
+        3
+      ],
+      "param_count": 432
+    },
+    {
+      "name": "model.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        16,
+        3,
+        3
+      ],
+      "param_count": 4608
+    },
+    {
+      "name": "model.2.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.2.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        1,
+        1
+      ],
+      "param_count": 1024
+    },
+    {
+      "name": "model.2.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.2.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        48,
+        1,
+        1
+      ],
+      "param_count": 3072
+    },
+    {
+      "name": "model.2.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.2.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        8,
+        16,
+        3,
+        3
+      ],
+      "param_count": 1152
+    },
+    {
+      "name": "model.2.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.2.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        8,
+        3,
+        3
+      ],
+      "param_count": 1152
+    },
+    {
+      "name": "model.3",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.3.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "param_count": 36864
+    },
+    {
+      "name": "model.4.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.4.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.4.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.4.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        96,
+        1,
+        1
+      ],
+      "param_count": 12288
+    },
+    {
+      "name": "model.4.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.4.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        32,
+        3,
+        3
+      ],
+      "param_count": 4608
+    },
+    {
+      "name": "model.4.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.4.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        16,
+        3,
+        3
+      ],
+      "param_count": 4608
+    },
+    {
+      "name": "model.5",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.5.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "param_count": 147456
+    },
+    {
+      "name": "model.6.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ],
+      "param_count": 16384
+    },
+    {
+      "name": "model.6.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ],
+      "param_count": 24576
+    },
+    {
+      "name": "model.6.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "param_count": 2048
+    },
+    {
+      "name": "model.6.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "param_count": 2048
+    },
+    {
+      "name": "model.6.m.0.cv3",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.m.0.cv3.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.6.m.0.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.6.m.0.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.6.m.0.m.1.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.6.m.0.m.1.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.6.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.7",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.7.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        128,
+        3,
+        3
+      ],
+      "param_count": 294912
+    },
+    {
+      "name": "model.8.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ],
+      "param_count": 65536
+    },
+    {
+      "name": "model.8.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ],
+      "param_count": 98304
+    },
+    {
+      "name": "model.8.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ],
+      "param_count": 8192
+    },
+    {
+      "name": "model.8.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ],
+      "param_count": 8192
+    },
+    {
+      "name": "model.8.m.0.cv3",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.m.0.cv3.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ],
+      "param_count": 16384
+    },
+    {
+      "name": "model.8.m.0.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "param_count": 36864
+    },
+    {
+      "name": "model.8.m.0.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "param_count": 36864
+    },
+    {
+      "name": "model.8.m.0.m.1.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "param_count": 36864
+    },
+    {
+      "name": "model.8.m.0.m.1.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.8.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "param_count": 36864
+    },
+    {
+      "name": "model.9",
+      "type": "SPPF",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.9.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.9.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ],
+      "param_count": 32768
+    },
+    {
+      "name": "model.9.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.9.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        512,
+        1,
+        1
+      ],
+      "param_count": 131072
+    },
+    {
+      "name": "model.10.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.10.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ],
+      "param_count": 65536
+    },
+    {
+      "name": "model.10.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.10.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ],
+      "param_count": 65536
+    },
+    {
+      "name": "model.10.m.0.attn.qkv",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.10.m.0.attn.qkv.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "param_count": 32768
+    },
+    {
+      "name": "model.10.m.0.attn.proj",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.10.m.0.attn.proj.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ],
+      "param_count": 16384
+    },
+    {
+      "name": "model.10.m.0.attn.pe",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.10.m.0.attn.pe.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ],
+      "param_count": 1152
+    },
+    {
+      "name": "model.10.m.0.ffn.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.10.m.0.ffn.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "param_count": 32768
+    },
+    {
+      "name": "model.10.m.0.ffn.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.10.m.0.ffn.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ],
+      "param_count": 32768
+    },
+    {
+      "name": "model.13.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        384,
+        1,
+        1
+      ],
+      "param_count": 49152
+    },
+    {
+      "name": "model.13.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ],
+      "param_count": 24576
+    },
+    {
+      "name": "model.13.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "param_count": 2048
+    },
+    {
+      "name": "model.13.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "param_count": 2048
+    },
+    {
+      "name": "model.13.m.0.cv3",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.m.0.cv3.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.13.m.0.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.13.m.0.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.13.m.0.m.1.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.13.m.0.m.1.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.13.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.16.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        256,
+        1,
+        1
+      ],
+      "param_count": 16384
+    },
+    {
+      "name": "model.16.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        96,
+        1,
+        1
+      ],
+      "param_count": 6144
+    },
+    {
+      "name": "model.16.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        32,
+        1,
+        1
+      ],
+      "param_count": 512
+    },
+    {
+      "name": "model.16.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        32,
+        1,
+        1
+      ],
+      "param_count": 512
+    },
+    {
+      "name": "model.16.m.0.cv3",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.m.0.cv3.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        1,
+        1
+      ],
+      "param_count": 1024
+    },
+    {
+      "name": "model.16.m.0.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.16.m.0.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.16.m.0.m.1.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.16.m.0.m.1.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.16.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.17",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.17.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "param_count": 36864
+    },
+    {
+      "name": "model.19.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ],
+      "param_count": 24576
+    },
+    {
+      "name": "model.19.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ],
+      "param_count": 24576
+    },
+    {
+      "name": "model.19.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "param_count": 2048
+    },
+    {
+      "name": "model.19.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "param_count": 2048
+    },
+    {
+      "name": "model.19.m.0.cv3",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.m.0.cv3.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.19.m.0.m.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.19.m.0.m.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.19.m.0.m.1.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.19.m.0.m.1.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.19.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.20",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.20.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "param_count": 147456
+    },
+    {
+      "name": "model.22.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ],
+      "param_count": 98304
+    },
+    {
+      "name": "model.22.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ],
+      "param_count": 98304
+    },
+    {
+      "name": "model.22.m.0.0.cv1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.m.0.0.cv1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        128,
+        3,
+        3
+      ],
+      "param_count": 73728
+    },
+    {
+      "name": "model.22.m.0.0.cv2",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.m.0.0.cv2.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        64,
+        3,
+        3
+      ],
+      "param_count": 73728
+    },
+    {
+      "name": "model.22.m.0.1.attn.qkv",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.m.0.1.attn.qkv.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "param_count": 32768
+    },
+    {
+      "name": "model.22.m.0.1.attn.proj",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.m.0.1.attn.proj.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ],
+      "param_count": 16384
+    },
+    {
+      "name": "model.22.m.0.1.attn.pe",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.m.0.1.attn.pe.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ],
+      "param_count": 1152
+    },
+    {
+      "name": "model.22.m.0.1.ffn.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.m.0.1.ffn.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "param_count": 32768
+    },
+    {
+      "name": "model.22.m.0.1.ffn.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.22.m.0.1.ffn.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ],
+      "param_count": 32768
+    },
+    {
+      "name": "model.23",
+      "type": "Detect",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv2.0.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv2.0.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        64,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.23.cv2.0.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv2.0.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.23.cv2.0.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "param_count": 68
+    },
+    {
+      "name": "model.23.cv2.1.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv2.1.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        128,
+        3,
+        3
+      ],
+      "param_count": 18432
+    },
+    {
+      "name": "model.23.cv2.1.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv2.1.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.23.cv2.1.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "param_count": 68
+    },
+    {
+      "name": "model.23.cv2.2.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv2.2.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        256,
+        3,
+        3
+      ],
+      "param_count": 36864
+    },
+    {
+      "name": "model.23.cv2.2.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv2.2.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.23.cv2.2.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "param_count": 68
+    },
+    {
+      "name": "model.23.cv3.0.0.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.0.0.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "param_count": 576
+    },
+    {
+      "name": "model.23.cv3.0.0.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.0.0.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.23.cv3.0.1.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.0.1.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "param_count": 576
+    },
+    {
+      "name": "model.23.cv3.0.1.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.0.1.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.23.cv3.0.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "param_count": 65
+    },
+    {
+      "name": "model.23.cv3.1.0.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.1.0.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ],
+      "param_count": 1152
+    },
+    {
+      "name": "model.23.cv3.1.0.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.1.0.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ],
+      "param_count": 8192
+    },
+    {
+      "name": "model.23.cv3.1.1.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.1.1.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "param_count": 576
+    },
+    {
+      "name": "model.23.cv3.1.1.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.1.1.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.23.cv3.1.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "param_count": 65
+    },
+    {
+      "name": "model.23.cv3.2.0.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.2.0.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        1,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.23.cv3.2.0.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.2.0.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        256,
+        1,
+        1
+      ],
+      "param_count": 16384
+    },
+    {
+      "name": "model.23.cv3.2.1.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.2.1.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "param_count": 576
+    },
+    {
+      "name": "model.23.cv3.2.1.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.cv3.2.1.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.23.cv3.2.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "param_count": 65
+    },
+    {
+      "name": "model.23.one2one_cv2.0.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv2.0.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        64,
+        3,
+        3
+      ],
+      "param_count": 9216
+    },
+    {
+      "name": "model.23.one2one_cv2.0.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv2.0.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.23.one2one_cv2.0.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "param_count": 68
+    },
+    {
+      "name": "model.23.one2one_cv2.1.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv2.1.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        128,
+        3,
+        3
+      ],
+      "param_count": 18432
+    },
+    {
+      "name": "model.23.one2one_cv2.1.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv2.1.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.23.one2one_cv2.1.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "param_count": 68
+    },
+    {
+      "name": "model.23.one2one_cv2.2.0",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv2.2.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        256,
+        3,
+        3
+      ],
+      "param_count": 36864
+    },
+    {
+      "name": "model.23.one2one_cv2.2.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv2.2.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.23.one2one_cv2.2.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "param_count": 68
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "param_count": 576
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "param_count": 576
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.23.one2one_cv3.0.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "param_count": 65
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ],
+      "param_count": 1152
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ],
+      "param_count": 8192
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "param_count": 576
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.23.one2one_cv3.1.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "param_count": 65
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        256,
+        1,
+        3,
+        3
+      ],
+      "param_count": 2304
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        256,
+        1,
+        1
+      ],
+      "param_count": 16384
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.0",
+      "type": "DWConv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.0.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "param_count": 576
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.1",
+      "type": "Conv",
+      "weight_shape": null,
+      "param_count": 0
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.1.conv",
+      "type": "Conv2d",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "param_count": 4096
+    },
+    {
+      "name": "model.23.one2one_cv3.2.2",
+      "type": "Conv2d",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "param_count": 65
+    }
+  ],
+  "modules": [
+    {
+      "name": "<root>",
+      "type": "DetectionModel",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.0.conv",
+      "type": "Conv2d",
+      "param_count": 432,
+      "weight_shape": [
+        16,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.0.act",
+      "type": "SiLU",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.1.conv",
+      "type": "Conv2d",
+      "param_count": 4608,
+      "weight_shape": [
+        32,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.2",
+      "type": "C3k2",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.2.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.2.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 1024,
+      "weight_shape": [
+        32,
+        32,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.2.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.2.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.2.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 3072,
+      "weight_shape": [
+        64,
+        48,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.2.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.2.m",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.2.m.0",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.2.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.2.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 1152,
+      "weight_shape": [
+        8,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.2.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 16,
+      "weight_shape": [
+        8
+      ]
+    },
+    {
+      "name": "model.2.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.2.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 1152,
+      "weight_shape": [
+        16,
+        8,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.2.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.3",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.3.conv",
+      "type": "Conv2d",
+      "param_count": 36864,
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.3.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.4",
+      "type": "C3k2",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.4.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.4.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.4.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.4.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.4.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 12288,
+      "weight_shape": [
+        128,
+        96,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.4.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.4.m",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.4.m.0",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.4.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.4.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 4608,
+      "weight_shape": [
+        16,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.4.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.4.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.4.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 4608,
+      "weight_shape": [
+        32,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.4.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.5",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.5.conv",
+      "type": "Conv2d",
+      "param_count": 147456,
+      "weight_shape": [
+        128,
+        128,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.5.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.6",
+      "type": "C3k2",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 16384,
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.6.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.6.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 24576,
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.6.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.6.m",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0",
+      "type": "C3k",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 2048,
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.6.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.6.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 2048,
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.6.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.6.m.0.cv3",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.cv3.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.6.m.0.cv3.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.6.m.0.m",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.m.0",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.6.m.0.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.6.m.0.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.6.m.0.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.6.m.0.m.1",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.m.1.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.6.m.0.m.1.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.6.m.0.m.1.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.6.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.6.m.0.m.1.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.7",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.7.conv",
+      "type": "Conv2d",
+      "param_count": 294912,
+      "weight_shape": [
+        256,
+        128,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.7.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.8",
+      "type": "C3k2",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 65536,
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.8.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.8.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 98304,
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.8.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.8.m",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0",
+      "type": "C3k",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 8192,
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.8.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.8.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 8192,
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.8.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.8.m.0.cv3",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.cv3.conv",
+      "type": "Conv2d",
+      "param_count": 16384,
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.8.m.0.cv3.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.8.m.0.m",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.m.0",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 36864,
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.8.m.0.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.8.m.0.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 36864,
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.8.m.0.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.8.m.0.m.1",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.m.1.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 36864,
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.8.m.0.m.1.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.8.m.0.m.1.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.8.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 36864,
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.8.m.0.m.1.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.9",
+      "type": "SPPF",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.9.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.9.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 32768,
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.9.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.9.cv1.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.9.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.9.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 131072,
+      "weight_shape": [
+        256,
+        512,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.9.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.9.m",
+      "type": "MaxPool2d",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10",
+      "type": "C2PSA",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 65536,
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.10.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.10.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 65536,
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.10.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.10.m",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0",
+      "type": "PSABlock",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.attn",
+      "type": "Attention",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.attn.qkv",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.attn.qkv.conv",
+      "type": "Conv2d",
+      "param_count": 32768,
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.10.m.0.attn.qkv.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.10.m.0.attn.qkv.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.attn.proj",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.attn.proj.conv",
+      "type": "Conv2d",
+      "param_count": 16384,
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.10.m.0.attn.proj.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.10.m.0.attn.proj.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.attn.pe",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.attn.pe.conv",
+      "type": "Conv2d",
+      "param_count": 1152,
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.10.m.0.attn.pe.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.10.m.0.attn.pe.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.ffn",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.ffn.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.ffn.0.conv",
+      "type": "Conv2d",
+      "param_count": 32768,
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.10.m.0.ffn.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.10.m.0.ffn.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.10.m.0.ffn.1.conv",
+      "type": "Conv2d",
+      "param_count": 32768,
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.10.m.0.ffn.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.10.m.0.ffn.1.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.11",
+      "type": "Upsample",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.12",
+      "type": "Concat",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13",
+      "type": "C3k2",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 49152,
+      "weight_shape": [
+        128,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.13.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.13.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 24576,
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.13.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.13.m",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0",
+      "type": "C3k",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 2048,
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.13.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.13.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 2048,
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.13.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.13.m.0.cv3",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.cv3.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.13.m.0.cv3.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.13.m.0.m",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.m.0",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.13.m.0.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.13.m.0.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.13.m.0.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.13.m.0.m.1",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.m.1.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.13.m.0.m.1.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.13.m.0.m.1.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.13.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.13.m.0.m.1.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.14",
+      "type": "Upsample",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.15",
+      "type": "Concat",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16",
+      "type": "C3k2",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 16384,
+      "weight_shape": [
+        64,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.16.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.16.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 6144,
+      "weight_shape": [
+        64,
+        96,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.16.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.16.m",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0",
+      "type": "C3k",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 512,
+      "weight_shape": [
+        16,
+        32,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.16.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.16.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 512,
+      "weight_shape": [
+        16,
+        32,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.16.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.16.m.0.cv3",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.cv3.conv",
+      "type": "Conv2d",
+      "param_count": 1024,
+      "weight_shape": [
+        32,
+        32,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.16.m.0.cv3.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.16.m.0.m",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.m.0",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.16.m.0.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.16.m.0.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.16.m.0.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.16.m.0.m.1",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.m.1.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.16.m.0.m.1.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.16.m.0.m.1.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.16.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.16.m.0.m.1.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.17",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.17.conv",
+      "type": "Conv2d",
+      "param_count": 36864,
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.17.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.18",
+      "type": "Concat",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19",
+      "type": "C3k2",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 24576,
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.19.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.19.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 24576,
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.19.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.19.m",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0",
+      "type": "C3k",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 2048,
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.19.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.19.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 2048,
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.19.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.19.m.0.cv3",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.cv3.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.19.m.0.cv3.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.19.m.0.m",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.m.0",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.m.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.m.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.19.m.0.m.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.19.m.0.m.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.m.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.19.m.0.m.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.19.m.0.m.1",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.m.1.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.m.1.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.19.m.0.m.1.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.19.m.0.m.1.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.19.m.0.m.1.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.19.m.0.m.1.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 64,
+      "weight_shape": [
+        32
+      ]
+    },
+    {
+      "name": "model.20",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.20.conv",
+      "type": "Conv2d",
+      "param_count": 147456,
+      "weight_shape": [
+        128,
+        128,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.20.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.21",
+      "type": "Concat",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22",
+      "type": "C3k2",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 98304,
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.22.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.22.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 98304,
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.22.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.22.m",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.0",
+      "type": "Bottleneck",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.0.cv1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.0.cv1.conv",
+      "type": "Conv2d",
+      "param_count": 73728,
+      "weight_shape": [
+        64,
+        128,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.22.m.0.0.cv1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.22.m.0.0.cv2",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.0.cv2.conv",
+      "type": "Conv2d",
+      "param_count": 73728,
+      "weight_shape": [
+        128,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.22.m.0.0.cv2.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.22.m.0.1",
+      "type": "PSABlock",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.attn",
+      "type": "Attention",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.attn.qkv",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.attn.qkv.conv",
+      "type": "Conv2d",
+      "param_count": 32768,
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.attn.qkv.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.attn.qkv.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.attn.proj",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.attn.proj.conv",
+      "type": "Conv2d",
+      "param_count": 16384,
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.attn.proj.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.attn.proj.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.attn.pe",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.attn.pe.conv",
+      "type": "Conv2d",
+      "param_count": 1152,
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.attn.pe.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.attn.pe.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.ffn",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.ffn.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.ffn.0.conv",
+      "type": "Conv2d",
+      "param_count": 32768,
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.ffn.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.ffn.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.22.m.0.1.ffn.1.conv",
+      "type": "Conv2d",
+      "param_count": 32768,
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.ffn.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.22.m.0.1.ffn.1.act",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23",
+      "type": "Detect",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.0.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.0.0.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        16,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv2.0.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.cv2.0.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.0.1.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv2.0.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.cv2.0.2",
+      "type": "Conv2d",
+      "param_count": 68,
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv2.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.1.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.1.0.conv",
+      "type": "Conv2d",
+      "param_count": 18432,
+      "weight_shape": [
+        16,
+        128,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv2.1.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.cv2.1.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.1.1.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv2.1.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.cv2.1.2",
+      "type": "Conv2d",
+      "param_count": 68,
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv2.2",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.2.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.2.0.conv",
+      "type": "Conv2d",
+      "param_count": 36864,
+      "weight_shape": [
+        16,
+        256,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv2.2.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.cv2.2.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv2.2.1.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv2.2.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.cv2.2.2",
+      "type": "Conv2d",
+      "param_count": 68,
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.0.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.0.0.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.0.0.0.conv",
+      "type": "Conv2d",
+      "param_count": 576,
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv3.0.0.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.0.0.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.0.0.1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3.0.0.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.0.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.0.1.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.0.1.0.conv",
+      "type": "Conv2d",
+      "param_count": 576,
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv3.0.1.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.0.1.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.0.1.1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3.0.1.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.0.2",
+      "type": "Conv2d",
+      "param_count": 65,
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.1.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.1.0.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.1.0.0.conv",
+      "type": "Conv2d",
+      "param_count": 1152,
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv3.1.0.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.23.cv3.1.0.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.1.0.1.conv",
+      "type": "Conv2d",
+      "param_count": 8192,
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3.1.0.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.1.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.1.1.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.1.1.0.conv",
+      "type": "Conv2d",
+      "param_count": 576,
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv3.1.1.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.1.1.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.1.1.1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3.1.1.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.1.2",
+      "type": "Conv2d",
+      "param_count": 65,
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3.2",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.2.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.2.0.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.2.0.0.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        256,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv3.2.0.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.23.cv3.2.0.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.2.0.1.conv",
+      "type": "Conv2d",
+      "param_count": 16384,
+      "weight_shape": [
+        64,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3.2.0.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.2.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.2.1.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.2.1.0.conv",
+      "type": "Conv2d",
+      "param_count": 576,
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.cv3.2.1.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.2.1.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.cv3.2.1.1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.cv3.2.1.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.cv3.2.2",
+      "type": "Conv2d",
+      "param_count": 65,
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.dfl",
+      "type": "Identity",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.0.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.0.0.conv",
+      "type": "Conv2d",
+      "param_count": 9216,
+      "weight_shape": [
+        16,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.0.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.0.0.act",
+      "type": "SiLU",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.0.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.0.1.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.0.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.0.2",
+      "type": "Conv2d",
+      "param_count": 68,
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.1.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.1.0.conv",
+      "type": "Conv2d",
+      "param_count": 18432,
+      "weight_shape": [
+        16,
+        128,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.1.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.1.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.1.1.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.1.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.1.2",
+      "type": "Conv2d",
+      "param_count": 68,
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.2",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.2.0",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.2.0.conv",
+      "type": "Conv2d",
+      "param_count": 36864,
+      "weight_shape": [
+        16,
+        256,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.2.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.2.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv2.2.1.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.2.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 32,
+      "weight_shape": [
+        16
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv2.2.2",
+      "type": "Conv2d",
+      "param_count": 68,
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3",
+      "type": "ModuleList",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.0.conv",
+      "type": "Conv2d",
+      "param_count": 576,
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.0.act",
+      "type": "SiLU",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.0.0.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.0.conv",
+      "type": "Conv2d",
+      "param_count": 576,
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.0.1.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.0.2",
+      "type": "Conv2d",
+      "param_count": 65,
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.0.conv",
+      "type": "Conv2d",
+      "param_count": 1152,
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 256,
+      "weight_shape": [
+        128
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.1.conv",
+      "type": "Conv2d",
+      "param_count": 8192,
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1.0.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.0.conv",
+      "type": "Conv2d",
+      "param_count": 576,
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1.1.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.1.2",
+      "type": "Conv2d",
+      "param_count": 65,
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.0.conv",
+      "type": "Conv2d",
+      "param_count": 2304,
+      "weight_shape": [
+        256,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 512,
+      "weight_shape": [
+        256
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.1.conv",
+      "type": "Conv2d",
+      "param_count": 16384,
+      "weight_shape": [
+        64,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2.0.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1",
+      "type": "Sequential",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.0",
+      "type": "DWConv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.0.conv",
+      "type": "Conv2d",
+      "param_count": 576,
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.0.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.1",
+      "type": "Conv",
+      "param_count": 0,
+      "weight_shape": null
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.1.conv",
+      "type": "Conv2d",
+      "param_count": 4096,
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2.1.1.bn",
+      "type": "BatchNorm2d",
+      "param_count": 128,
+      "weight_shape": [
+        64
+      ]
+    },
+    {
+      "name": "model.23.one2one_cv3.2.2",
+      "type": "Conv2d",
+      "param_count": 65,
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ]
+    }
+  ]
+}

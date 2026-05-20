@@ -1,0 +1,125 @@
+{
+  "qparams": "/home/paipaiqi01/workspace/rknnquantizationLearning/outputs/quant/inlier_activation_qparams.json",
+  "masks": "/home/paipaiqi01/workspace/rknnquantizationLearning/outputs/gvss/em_gmm_train64_masks.npz",
+  "images": 64,
+  "objective": "uniform_inlier_reconstruction_mse_symmetric_i8",
+  "layers": {
+    "model.2": {
+      "init_scale": 0.16142783577986589,
+      "refined_scale": 0.1011074546427468,
+      "init_mse": 0.002232495928183198,
+      "refined_mse": 0.0010554942867475434,
+      "improvement_ratio": 0.5272133429571345,
+      "grid_factor": 0.626332219312064,
+      "sample_count": 200000
+    },
+    "model.4": {
+      "init_scale": 0.059911791733869416,
+      "refined_scale": 0.030479515703348867,
+      "init_mse": 0.000357682874891907,
+      "refined_mse": 9.590228416612595e-05,
+      "improvement_ratio": 0.7318790165866679,
+      "grid_factor": 0.5087398460513433,
+      "sample_count": 200000
+    },
+    "model.6": {
+      "init_scale": 0.06911224455345334,
+      "refined_scale": 0.04481374622381605,
+      "init_mse": 0.0003554427239578217,
+      "refined_mse": 0.00016436058992889852,
+      "improvement_ratio": 0.5375890998730861,
+      "grid_factor": 0.6484197773255048,
+      "sample_count": 200000
+    },
+    "model.8": {
+      "init_scale": 0.06719643299973856,
+      "refined_scale": 0.04510804161518264,
+      "init_mse": 0.00032675659167580307,
+      "refined_mse": 0.00016251711984767263,
+      "improvement_ratio": 0.5026355275216096,
+      "grid_factor": 0.6712862513901318,
+      "sample_count": 200000
+    },
+    "model.9": {
+      "init_scale": 0.06940598375215305,
+      "refined_scale": 0.054454831150819547,
+      "init_mse": 0.0004007372772321105,
+      "refined_mse": 0.0002825285103977503,
+      "improvement_ratio": 0.2949782152806629,
+      "grid_factor": 0.7845840978967508,
+      "sample_count": 200000
+    },
+    "model.10": {
+      "init_scale": 0.07660292077252245,
+      "refined_scale": 0.04476587548613194,
+      "init_mse": 0.0005812254385091364,
+      "refined_mse": 0.00016086310628143905,
+      "improvement_ratio": 0.72323457367238,
+      "grid_factor": 0.5843886242806228,
+      "sample_count": 200000
+    },
+    "model.13": {
+      "init_scale": 0.05030540030772292,
+      "refined_scale": 0.034359600976247226,
+      "init_mse": 0.0002394897019257769,
+      "refined_mse": 0.00011453805489289907,
+      "improvement_ratio": 0.5217412106997531,
+      "grid_factor": 0.6830201283771977,
+      "sample_count": 200000
+    },
+    "model.16": {
+      "init_scale": 0.05313029627161702,
+      "refined_scale": 0.04545801720303843,
+      "init_mse": 0.00021117724827490747,
+      "refined_mse": 0.00016885654922610556,
+      "improvement_ratio": 0.20040368645067974,
+      "grid_factor": 0.8555950256826022,
+      "sample_count": 200000
+    },
+    "model.19": {
+      "init_scale": 0.05421421847005529,
+      "refined_scale": 0.03968713088943954,
+      "init_mse": 0.00021558860316872597,
+      "refined_mse": 0.00015381600980823702,
+      "improvement_ratio": 0.28652995776471496,
+      "grid_factor": 0.7320428479728127,
+      "sample_count": 200000
+    },
+    "model.22": {
+      "init_scale": 0.14099723335326186,
+      "refined_scale": 0.12489076958761537,
+      "init_mse": 0.0014556307578459382,
+      "refined_mse": 0.001105229648316969,
+      "improvement_ratio": 0.24072114967362837,
+      "grid_factor": 0.8857675191023606,
+      "sample_count": 162560
+    },
+    "model.23.cv3.0": {
+      "init_scale": 0.0889902114868164,
+      "refined_scale": 0.08746141291814137,
+      "init_mse": 0.0006682059029117227,
+      "refined_mse": 0.0006638394407824683,
+      "improvement_ratio": 0.006534605740876274,
+      "grid_factor": 0.9828205985452511,
+      "sample_count": 1277
+    },
+    "model.23.cv3.1": {
+      "init_scale": 0.08926701733446497,
+      "refined_scale": 0.0908273773123966,
+      "init_mse": 0.0006975071737542748,
+      "refined_mse": 0.0006744602030201894,
+      "improvement_ratio": 0.033041912114017434,
+      "grid_factor": 1.0174796921026865,
+      "sample_count": 754
+    },
+    "model.23.cv3.2": {
+      "init_scale": 0.0881604998130498,
+      "refined_scale": 0.08970151820540086,
+      "init_mse": 0.0006472573732025921,
+      "refined_mse": 0.0006244702039997992,
+      "improvement_ratio": 0.03520573136161179,
+      "grid_factor": 1.0174796921026865,
+      "sample_count": 143
+    }
+  }
+}

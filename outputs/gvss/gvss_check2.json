@@ -1,0 +1,494 @@
+[
+  {
+    "image": "/home/paipaiqi01/workspace/data/spacer-merged_processed/images/train/high_DJI_0453_x2304_y2054.jpg",
+    "loss": 5.675034046173096,
+    "scores_shape": [
+      1,
+      1,
+      8400
+    ],
+    "topk": 50,
+    "layers": {
+      "model.2": {
+        "activation_shape": [
+          1,
+          64,
+          160,
+          160
+        ],
+        "saliency_shape": [
+          1,
+          160,
+          160
+        ],
+        "min": 1.939648973348085e-05,
+        "max": 0.030456123873591423,
+        "mean": 0.0005708844400942326,
+        "nonzero": 25600,
+        "count": 25600
+      },
+      "model.4": {
+        "activation_shape": [
+          1,
+          128,
+          80,
+          80
+        ],
+        "saliency_shape": [
+          1,
+          80,
+          80
+        ],
+        "min": 0.0002175396220991388,
+        "max": 0.16583284735679626,
+        "mean": 0.004740894306451082,
+        "nonzero": 6400,
+        "count": 6400
+      },
+      "model.6": {
+        "activation_shape": [
+          1,
+          128,
+          40,
+          40
+        ],
+        "saliency_shape": [
+          1,
+          40,
+          40
+        ],
+        "min": 0.00036221634945832193,
+        "max": 0.21969984471797943,
+        "mean": 0.007570372894406319,
+        "nonzero": 1600,
+        "count": 1600
+      },
+      "model.8": {
+        "activation_shape": [
+          1,
+          256,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 0.0002826687414199114,
+        "max": 0.27918288111686707,
+        "mean": 0.016300570219755173,
+        "nonzero": 400,
+        "count": 400
+      },
+      "model.9": {
+        "activation_shape": [
+          1,
+          256,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 8.780106873018667e-05,
+        "max": 0.2567697763442993,
+        "mean": 0.008617409504950047,
+        "nonzero": 400,
+        "count": 400
+      },
+      "model.10": {
+        "activation_shape": [
+          1,
+          256,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 0.0,
+        "max": 0.47890159487724304,
+        "mean": 0.010822436772286892,
+        "nonzero": 336,
+        "count": 400
+      },
+      "model.13": {
+        "activation_shape": [
+          1,
+          128,
+          40,
+          40
+        ],
+        "saliency_shape": [
+          1,
+          40,
+          40
+        ],
+        "min": 0.0,
+        "max": 0.3495270609855652,
+        "mean": 0.003919783979654312,
+        "nonzero": 822,
+        "count": 1600
+      },
+      "model.16": {
+        "activation_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "saliency_shape": [
+          1,
+          80,
+          80
+        ],
+        "min": 0.0,
+        "max": 0.21020165085792542,
+        "mean": 0.0015897342236712575,
+        "nonzero": 1985,
+        "count": 6400
+      },
+      "model.19": {
+        "activation_shape": [
+          1,
+          128,
+          40,
+          40
+        ],
+        "saliency_shape": [
+          1,
+          40,
+          40
+        ],
+        "min": 0.0,
+        "max": 0.19464251399040222,
+        "mean": 0.0033145337365567684,
+        "nonzero": 111,
+        "count": 1600
+      },
+      "model.22": {
+        "activation_shape": [
+          1,
+          256,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "nonzero": 0,
+        "count": 400
+      },
+      "model.23.cv3.0": {
+        "activation_shape": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "saliency_shape": [
+          1,
+          80,
+          80
+        ],
+        "min": 0.0,
+        "max": 0.01999524049460888,
+        "mean": 9.98717441689223e-05,
+        "nonzero": 32,
+        "count": 6400
+      },
+      "model.23.cv3.1": {
+        "activation_shape": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "saliency_shape": [
+          1,
+          40,
+          40
+        ],
+        "min": 0.0,
+        "max": 0.01999523490667343,
+        "mean": 0.00013103318633511662,
+        "nonzero": 18,
+        "count": 1600
+      },
+      "model.23.cv3.2": {
+        "activation_shape": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "nonzero": 0,
+        "count": 400
+      }
+    }
+  },
+  {
+    "image": "/home/paipaiqi01/workspace/data/spacer-merged_processed/images/train/high_DJI_0492_x1536_y2054.jpg",
+    "loss": 4.694025039672852,
+    "scores_shape": [
+      1,
+      1,
+      8400
+    ],
+    "topk": 50,
+    "layers": {
+      "model.2": {
+        "activation_shape": [
+          1,
+          64,
+          160,
+          160
+        ],
+        "saliency_shape": [
+          1,
+          160,
+          160
+        ],
+        "min": 4.013331817986909e-06,
+        "max": 0.03548699617385864,
+        "mean": 0.0004692216170951724,
+        "nonzero": 25600,
+        "count": 25600
+      },
+      "model.4": {
+        "activation_shape": [
+          1,
+          128,
+          80,
+          80
+        ],
+        "saliency_shape": [
+          1,
+          80,
+          80
+        ],
+        "min": 4.0179729694500566e-05,
+        "max": 0.2443363070487976,
+        "mean": 0.003802291117608547,
+        "nonzero": 6400,
+        "count": 6400
+      },
+      "model.6": {
+        "activation_shape": [
+          1,
+          128,
+          40,
+          40
+        ],
+        "saliency_shape": [
+          1,
+          40,
+          40
+        ],
+        "min": 5.1180526497773826e-05,
+        "max": 0.3384416401386261,
+        "mean": 0.006018046289682388,
+        "nonzero": 1600,
+        "count": 1600
+      },
+      "model.8": {
+        "activation_shape": [
+          1,
+          256,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 8.392076438212825e-07,
+        "max": 0.19359245896339417,
+        "mean": 0.011373166926205158,
+        "nonzero": 400,
+        "count": 400
+      },
+      "model.9": {
+        "activation_shape": [
+          1,
+          256,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 2.8368805260470253e-07,
+        "max": 0.17234233021736145,
+        "mean": 0.005997770000249147,
+        "nonzero": 400,
+        "count": 400
+      },
+      "model.10": {
+        "activation_shape": [
+          1,
+          256,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 0.0,
+        "max": 0.5069953799247742,
+        "mean": 0.00706409802660346,
+        "nonzero": 166,
+        "count": 400
+      },
+      "model.13": {
+        "activation_shape": [
+          1,
+          128,
+          40,
+          40
+        ],
+        "saliency_shape": [
+          1,
+          40,
+          40
+        ],
+        "min": 0.0,
+        "max": 0.47270551323890686,
+        "mean": 0.0030628792010247707,
+        "nonzero": 301,
+        "count": 1600
+      },
+      "model.16": {
+        "activation_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "saliency_shape": [
+          1,
+          80,
+          80
+        ],
+        "min": 0.0,
+        "max": 0.24494418501853943,
+        "mean": 0.0014294727006927133,
+        "nonzero": 720,
+        "count": 6400
+      },
+      "model.19": {
+        "activation_shape": [
+          1,
+          128,
+          40,
+          40
+        ],
+        "saliency_shape": [
+          1,
+          40,
+          40
+        ],
+        "min": 0.0,
+        "max": 0.15642580389976501,
+        "mean": 0.0015743480762466788,
+        "nonzero": 48,
+        "count": 1600
+      },
+      "model.22": {
+        "activation_shape": [
+          1,
+          256,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "nonzero": 0,
+        "count": 400
+      },
+      "model.23.cv3.0": {
+        "activation_shape": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "saliency_shape": [
+          1,
+          80,
+          80
+        ],
+        "min": 0.0,
+        "max": 0.019987056031823158,
+        "mean": 0.00010718459088820964,
+        "nonzero": 37,
+        "count": 6400
+      },
+      "model.23.cv3.1": {
+        "activation_shape": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "saliency_shape": [
+          1,
+          40,
+          40
+        ],
+        "min": 0.0,
+        "max": 0.01998579315841198,
+        "mean": 0.00011860592348966748,
+        "nonzero": 13,
+        "count": 1600
+      },
+      "model.23.cv3.2": {
+        "activation_shape": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "saliency_shape": [
+          1,
+          20,
+          20
+        ],
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "nonzero": 0,
+        "count": 400
+      }
+    }
+  }
+]

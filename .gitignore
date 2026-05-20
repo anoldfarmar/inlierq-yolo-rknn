@@ -27,15 +27,15 @@ Thumbs.db
 # *.param
 
 # Datasets, calibration images, and generated model folders
-data/
-dataset/
-datasets/
-images/
-labels/
-runs/
-outputs/
-results/
-spacerRKNNmodels/
+# data/
+# dataset/
+# datasets/
+# images/
+# labels/
+# runs/
+# outputs/
+# results/
+# spacerRKNNmodels/
 
 # Archives and large exports
 *.zip
@@ -46,8 +46,8 @@ spacerRKNNmodels/
 *.rar
 
 # RKNN calibration and debug outputs
-*.calib.txt
-*_debug/
-debug_outputs/
-dumps/
+# *.calib.txt
+# *_debug/
+# debug_outputs/
+# dumps/
 

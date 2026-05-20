@@ -1,0 +1,385 @@
+{
+  "input": "/home/paipaiqi01/workspace/rknnquantizationLearning/outputs/gvss/gvss_train64_saliency.npz",
+  "threshold": 0.5,
+  "sparse_nonzero_threshold": 0.1,
+  "inlier_rule": "component_with_larger_saliency_mean",
+  "layers": {
+    "model.2": {
+      "key": "model__2",
+      "mu": [
+        0.00024772600255146824,
+        0.002170108035190242
+      ],
+      "var": [
+        3.846934179130035e-08,
+        5.06817521096531e-06
+      ],
+      "pi": [
+        0.7681166424302748,
+        0.2294111914367903
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 1.0,
+      "iterations": 33,
+      "converged": true,
+      "count": 1638400,
+      "inlier_count": 337879,
+      "inlier_ratio": 0.2062249755859375,
+      "saliency_min": 7.808325790392701e-07,
+      "saliency_max": 0.15356196463108063,
+      "saliency_mean": 0.0007517212652601302,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.22941118478775024
+    },
+    "model.4": {
+      "key": "model__4",
+      "mu": [
+        0.002099292538629124,
+        0.0178857070718313
+      ],
+      "var": [
+        2.690540200317085e-06,
+        0.0003330985744773944
+      ],
+      "pi": [
+        0.7684898016563758,
+        0.2291524295378647
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 1.0,
+      "iterations": 32,
+      "converged": true,
+      "count": 409600,
+      "inlier_count": 84156,
+      "inlier_ratio": 0.205458984375,
+      "saliency_min": 1.0985127119056415e-05,
+      "saliency_max": 0.577756404876709,
+      "saliency_mean": 0.006168391555547714,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.22915242612361908
+    },
+    "model.6": {
+      "key": "model__6",
+      "mu": [
+        0.003800465386186492,
+        0.028869392695928236
+      ],
+      "var": [
+        8.703833751424025e-06,
+        0.0007892606313795017
+      ],
+      "pi": [
+        0.7705200486158366,
+        0.22746764134198424
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 1.0,
+      "iterations": 32,
+      "converged": true,
+      "count": 102400,
+      "inlier_count": 20617,
+      "inlier_ratio": 0.201337890625,
+      "saliency_min": 2.482304444129113e-05,
+      "saliency_max": 0.8326440453529358,
+      "saliency_mean": 0.010091989301145077,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.22746765613555908
+    },
+    "model.8": {
+      "key": "model__8",
+      "mu": [
+        0.007183960148445455,
+        0.04485622513820448
+      ],
+      "var": [
+        3.204559895254698e-05,
+        0.001438443150529623
+      ],
+      "pi": [
+        0.7179950022812792,
+        0.2801786605261211
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 1.0,
+      "iterations": 47,
+      "converged": true,
+      "count": 25600,
+      "inlier_count": 6210,
+      "inlier_ratio": 0.242578125,
+      "saliency_min": 8.392076438212825e-07,
+      "saliency_max": 1.485982060432434,
+      "saliency_mean": 0.018529420718550682,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.28017866611480713
+    },
+    "model.9": {
+      "key": "model__9",
+      "mu": [
+        0.0027026837117936613,
+        0.029043183430760226
+      ],
+      "var": [
+        5.8352696546886845e-06,
+        0.0009939175944674529
+      ],
+      "pi": [
+        0.7509784674363383,
+        0.246709673313783
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 1.0,
+      "iterations": 34,
+      "converged": true,
+      "count": 25600,
+      "inlier_count": 5748,
+      "inlier_ratio": 0.22453125,
+      "saliency_min": 2.8368805260470253e-07,
+      "saliency_max": 1.4230715036392212,
+      "saliency_mean": 0.01006025169044733,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.2467096745967865
+    },
+    "model.10": {
+      "key": "model__10",
+      "mu": [
+        8.025956782965918e-05,
+        0.027383321481659954
+      ],
+      "var": [
+        1.591903389711553e-08,
+        0.0022357556098824283
+      ],
+      "pi": [
+        0.5475185424392828,
+        0.44713614514178507
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 0.8625,
+      "iterations": 50,
+      "converged": true,
+      "count": 25600,
+      "inlier_count": 11367,
+      "inlier_ratio": 0.4440234375,
+      "saliency_min": 0.0,
+      "saliency_max": 1.0860165357589722,
+      "saliency_mean": 0.01467529684305191,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.44713616371154785
+    },
+    "model.13": {
+      "key": "model__13",
+      "mu": [
+        3.268706205276186e-05,
+        0.01181037995704722
+      ],
+      "var": [
+        5.64016021160004e-09,
+        0.00043324605145168333
+      ],
+      "pi": [
+        0.671498649783351,
+        0.32320864591173537
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 0.722509765625,
+      "iterations": 19,
+      "converged": true,
+      "count": 102400,
+      "inlier_count": 32861,
+      "inlier_ratio": 0.320908203125,
+      "saliency_min": 0.0,
+      "saliency_max": 0.751010000705719,
+      "saliency_mean": 0.005037117749452591,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.32320865988731384
+    },
+    "model.16": {
+      "key": "model__16",
+      "mu": [
+        9.073021731728633e-06,
+        0.0025940286718836845
+      ],
+      "var": [
+        7.342179434374786e-10,
+        2.164987172309283e-05
+      ],
+      "pi": [
+        0.742234888735812,
+        0.24538207047271027
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 0.64200439453125,
+      "iterations": 21,
+      "converged": true,
+      "count": 409600,
+      "inlier_count": 99520,
+      "inlier_ratio": 0.24296875,
+      "saliency_min": 0.0,
+      "saliency_max": 0.2709645628929138,
+      "saliency_mean": 0.0016277141403406858,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.24538208544254303
+    },
+    "model.19": {
+      "key": "model__19",
+      "mu": [
+        1.0447983212894094e-05,
+        0.018862948700768597
+      ],
+      "var": [
+        9.780908390539268e-10,
+        0.0009656193714593764
+      ],
+      "pi": [
+        0.798410455666129,
+        0.20121052422407934
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": false,
+      "nonzero_ratio": 0.5340625,
+      "iterations": 13,
+      "converged": true,
+      "count": 102400,
+      "inlier_count": 20500,
+      "inlier_ratio": 0.2001953125,
+      "saliency_min": 0.0,
+      "saliency_max": 0.3127444386482239,
+      "saliency_mean": 0.0038927262648940086,
+      "posterior_min": 3.228293717419395e-12,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.20121051371097565
+    },
+    "model.22": {
+      "key": "model__22",
+      "mu": [
+        0.019320278298212066,
+        0.08010109975177422
+      ],
+      "var": [
+        0.00020248265881499708,
+        0.0021674952431725903
+      ],
+      "pi": [
+        0.5708566604287021,
+        0.42914330226694336
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": true,
+      "nonzero_ratio": 0.0671875,
+      "iterations": 56,
+      "converged": true,
+      "count": 25600,
+      "inlier_count": 635,
+      "inlier_ratio": 0.0248046875,
+      "saliency_min": 0.0,
+      "saliency_max": 0.26241204142570496,
+      "saliency_mean": 0.003050578758120537,
+      "posterior_min": 0.0,
+      "posterior_max": 1.0,
+      "posterior_mean": 0.028833065181970596
+    },
+    "model.23.cv3.0": {
+      "key": "model__23__cv3__0",
+      "mu": [
+        0.01801888921910007,
+        0.019988857555484213
+      ],
+      "var": [
+        1.6800344051137716e-05,
+        1.2612278555730117e-10
+      ],
+      "pi": [
+        0.1949913930717213,
+        0.8050084385090335
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": true,
+      "nonzero_ratio": 0.00386474609375,
+      "iterations": 19,
+      "converged": true,
+      "count": 409600,
+      "inlier_count": 1277,
+      "inlier_ratio": 0.00311767578125,
+      "saliency_min": 0.0,
+      "saliency_max": 0.019999753683805466,
+      "saliency_mean": 7.576730422442779e-05,
+      "posterior_min": 0.0,
+      "posterior_max": 0.9994090795516968,
+      "posterior_mean": 0.003111153142526746
+    },
+    "model.23.cv3.1": {
+      "key": "model__23__cv3__1",
+      "mu": [
+        0.008581447707683912,
+        0.019989713643152322
+      ],
+      "var": [
+        4.787167585863325e-05,
+        1.0965618830163181e-10
+      ],
+      "pi": [
+        0.44704694299801323,
+        0.5529530410352729
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": true,
+      "nonzero_ratio": 0.01328125,
+      "iterations": 21,
+      "converged": true,
+      "count": 102400,
+      "inlier_count": 754,
+      "inlier_ratio": 0.00736328125,
+      "saliency_min": 0.0,
+      "saliency_max": 0.019999761134386063,
+      "saliency_mean": 0.0001977536012418568,
+      "posterior_min": 0.0,
+      "posterior_max": 0.9996858239173889,
+      "posterior_mean": 0.007343907840549946
+    },
+    "model.23.cv3.2": {
+      "key": "model__23__cv3__2",
+      "mu": [
+        0.008011491598818086,
+        0.019923619402809255
+      ],
+      "var": [
+        3.7256908659033735e-05,
+        1.0152976353233808e-08
+      ],
+      "pi": [
+        0.45029293596369113,
+        0.5497070494747739
+      ],
+      "inlier_component": 1,
+      "fit_nonzero_only": true,
+      "nonzero_ratio": 0.0100390625,
+      "iterations": 18,
+      "converged": true,
+      "count": 25600,
+      "inlier_count": 143,
+      "inlier_ratio": 0.0055859375,
+      "saliency_min": 0.0,
+      "saliency_max": 0.019999725744128227,
+      "saliency_mean": 0.0001461654610466212,
+      "posterior_min": 0.0,
+      "posterior_max": 0.9979920983314514,
+      "posterior_mean": 0.005518543533980846
+    }
+  }
+}
