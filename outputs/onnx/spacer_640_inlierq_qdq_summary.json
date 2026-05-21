@@ -1,0 +1,68 @@
+{
+  "onnx": "/home/paipaiqi01/workspace/rknnquantizationLearning/outputs/onnx/spacer_640_inlierq_qdq.onnx",
+  "node_count": 492,
+  "op_counts": {
+    "Add": 23,
+    "Cast": 3,
+    "Concat": 26,
+    "Constant": 66,
+    "ConstantOfShape": 2,
+    "Conv": 102,
+    "DequantizeLinear": 10,
+    "Div": 2,
+    "Expand": 2,
+    "Flatten": 2,
+    "Gather": 4,
+    "GatherElements": 2,
+    "MatMul": 4,
+    "MaxPool": 3,
+    "Mod": 1,
+    "Mul": 93,
+    "QuantizeLinear": 10,
+    "ReduceMax": 1,
+    "Reshape": 14,
+    "Resize": 2,
+    "Shape": 3,
+    "Sigmoid": 88,
+    "Slice": 2,
+    "Softmax": 2,
+    "Split": 12,
+    "Sub": 1,
+    "Tile": 2,
+    "TopK": 2,
+    "Transpose": 5,
+    "Unsqueeze": 3
+  },
+  "quantize_linear_count": 10,
+  "dequantize_linear_count": 10,
+  "graph_inputs": [
+    "images"
+  ],
+  "graph_outputs": [
+    "output0"
+  ],
+  "sample_quantize_nodes": [
+    "/model.2/QuantizeLinear",
+    "/model.4/QuantizeLinear",
+    "/model.6/QuantizeLinear",
+    "/model.8/QuantizeLinear",
+    "/model.9/QuantizeLinear",
+    "/model.10/QuantizeLinear",
+    "/model.13/QuantizeLinear",
+    "/model.16/QuantizeLinear",
+    "/model.19/QuantizeLinear",
+    "/model.22/QuantizeLinear"
+  ],
+  "sample_dequantize_nodes": [
+    "/model.2/DequantizeLinear",
+    "/model.4/DequantizeLinear",
+    "/model.6/DequantizeLinear",
+    "/model.8/DequantizeLinear",
+    "/model.9/DequantizeLinear",
+    "/model.10/DequantizeLinear",
+    "/model.13/DequantizeLinear",
+    "/model.16/DequantizeLinear",
+    "/model.19/DequantizeLinear",
+    "/model.22/DequantizeLinear"
+  ]
+}

@@ -52,6 +52,66 @@
   - 输出: `outputs/quant/inlier_activation_scale_refined.json`
   - 目标: uniform_inlier_reconstruction_mse_symmetric_i8
   - 常规层MSE改善约20%-73%，Detect score层因Inlier样本稀疏仅小幅改善约0.6%-3.5%
+- 已新增并运行diagonal-Fisher scale微调：
+  - 脚本: `inlierq_rknn/calibrate/fisher_scale_refine.py`
+  - 输出: `outputs/quant/inlier_activation_fisher_refined.json`
+  - 目标: diagonal_fisher_weighted_inlier_reconstruction_mse_symmetric_i8
+  - Fisher proxy: GVSS saliency平方，作用在EM-GMM得到的Inlier空间位置
+  - 13个有效Hook层全部完成；`model.2` weighted MSE额外改善约13.5%，`model.19`约34.5%，Detect score层约0.6%-7.7%
+- 已新增并运行统一量化配置导出：
+  - 脚本: `inlierq_rknn/quantize/export_quant_config.py`
+  - 输出: `outputs/quant/inlierq_quant_config.json`
+  - 配置层数: 13
+  - validation: missing/extra refined/fisher layers均为空
+  - 统一配置优先使用Fisher-refined symmetric int8 activation scale，同时保留grid-search、u8 asymmetric和per-channel symmetric参考参数
+- 已开始Phase 3脚本实现，重计算步骤按用户要求不在Codex中执行：
+  - 新增 `inlierq_rknn/quantize/fake_quantize.py`
+    - 插入固定activation fake-quant wrapper
+    - Conv2d权重执行per-channel symmetric fake quant
+    - 支持 `--dry-run` 和 `--export-backend ultralytics|torch`
+    - 无`tqdm`时也会打印进度计数
+  - 新增 `inlierq_rknn/quantize/check_onnx_qdq.py`
+    - 检查ONNX图中QuantizeLinear/DequantizeLinear节点数量
+    - 支持输出summary JSON
+  - 新增 `inlierq_rknn/rknn/convert_qdq_rknn.py`
+    - 默认 `rknn.build(do_quantization=False)`
+    - 提供5阶段日志，便于判断RKNN转换是否卡住
+  - 新增运行说明: `plan/phase3_runbook.md`
+  - 已完成轻量dry-run：13/13 activation层映射成功，126个Conv2d权重fake quant，dummy forward通过
+  - 环境发现：`yolo26`当前缺少 `onnx/onnxruntime/tqdm`；`rknn`环境已有 `rknn/onnx/tqdm`
+- 用户已成功导出并检查ONNX Q/DQ候选模型：
+  - `outputs/onnx/spacer_640_inlierq_qdq.onnx`
+  - `outputs/onnx/spacer_640_inlierq_qdq_summary.json`
+  - ONNX节点数: 492
+  - QuantizeLinear: 10
+  - DequantizeLinear: 10
+  - 当前Q/DQ节点覆盖 `model.2/4/6/8/9/10/13/16/19/22`，Detect score层未出现在Ultralytics导出的Q/DQ节点中，后续若精度异常需要重点回查导出路径
+- 用户运行RKNN转换时遇到ONNX兼容错误：
+  - 错误: `AttributeError: module 'onnx' has no attribute 'mapping'`
+  - 原因: `rknn`环境ONNX 1.21移除了旧的`onnx.mapping`公开接口，而rknn-toolkit2 2.3.2仍依赖该接口
+  - 已修复: `inlierq_rknn/rknn/convert_qdq_rknn.py`加入`patch_onnx_mapping_for_rknn()`，在导入RKNN前补回`TENSOR_TYPE_TO_NP_TYPE`
+- 用户再次运行后已通过`load_onnx`，进入`build`阶段；新的错误仍是ONNX旧接口缺失：
+  - 错误: `types.SimpleNamespace`缺少`NP_TYPE_TO_TENSOR_TYPE`
+  - 已修复: shim继续补齐`NP_TYPE_TO_TENSOR_TYPE`
+  - 额外观察: RKNN提示QAT模型在`optimization_level=3`可能影响精度，建议优先尝试`optimization_level=2`生成保守版本，再与level 3对比
+- 用户已成功完成Phase 3 RKNN转换：
+  - `outputs/rknn/spacer_640_inlierq_opt2.rknn`，约8.1 MB，optimization-level=2
+  - `outputs/rknn/spacer_640_inlierq.rknn`，约7.1 MB，optimization-level=3
+  - Phase 3主链路状态更新为completed
+- 已检查并修改用户提供的评测脚本 `eval/rknn-infer-test.py`：
+  - 原脚本适合raw/split输出，但会把InlierQ的postprocessed `[1,300,6]` 错当成raw `xywh + class scores`
+  - 已新增postprocessed输出解码分支，按 `xyxy, score, class` 处理
+  - 已新增 `--output-format auto|raw|postprocessed`
+  - 默认 `--imgsz` 从1280改为640，与当前spacer_640模型对齐
+  - `python -m py_compile eval/rknn-infer-test.py` 通过
+- 用户完成四模型RK3588评测并提供结果表：
+  - 文件: `eval/ModelComparisonResults.xlsx`
+  - 模型: baseline（pt直接转RKNN未量化）、int8_split_baseline、inlierq_opt2、inlierq
+  - 最佳mAP@0.5: inlierq=0.9937
+  - 最佳mAP@0.5:0.95: inlierq=0.6596
+  - 最佳FPS: int8_split_baseline=36.15
+  - InlierQ相对未量化baseline的mAP@0.5:0.95仅约+1.74%相对提升，但相对int8_split_baseline FPS下降约52.86%
+  - 当前结论: 单类别spacer检测场景中，这版InlierQ的精度收益不足以抵消速度损失，实际部署不推荐替换int8_split_baseline
 
 ### 本次新增信息
 - 用户原有量化方法确认: rknn-toolkit2内置校准（MinMax/KL），300张校准图
@@ -81,7 +141,20 @@
 - [x] 开始Phase 2: InlierQ核心算法PyTorch实现
 - [x] GVSS遍历64张校准图并导出聚合显著性分布
 - [x] EM-GMM聚类生成Inlier masks
-- [ ] Inlier-aware量化参数初始化与优化
+- [x] Inlier-aware量化参数初始化与优化
   - [x] Inlier MinMax scale/zero-point初始化
   - [x] 重建误差近似下的scale微调
-  - [ ] 统一量化配置导出
+  - [x] diagonal-Fisher proxy + Adam scale微调
+  - [x] 统一量化配置导出
+- [x] Phase 3脚本准备
+  - [x] fake quant / ONNX导出脚本
+  - [x] ONNX Q/DQ检查脚本
+  - [x] RKNN Q/DQ转换脚本
+  - [x] 用户侧运行ONNX导出、Q/DQ检查和RKNN build
+- [x] Phase 4评测脚本初步适配
+  - [x] 支持postprocessed `[1,300,6]`
+  - [x] 保留baseline raw/split输出解码
+  - [x] 用户提供baseline RKNN路径并运行四组评测
+- [x] Phase 5实测与对比分析
+  - [x] 汇总四模型mAP/Precision/Recall/FPS
+  - [x] 得出部署建议: 当前仍推荐int8_split_baseline

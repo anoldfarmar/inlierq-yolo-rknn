@@ -173,6 +173,18 @@ GVSS实现方案:
 - 对非零显著性比例低于10%的稀疏层，EM-GMM只在非零S^l上拟合，零梯度位置直接视为non-inlier，避免大量零值让两个高斯成分退化。
 - Inlier activation MinMax初始化已完成，13个有效Hook层均输出量化参数初值。常规层activation范围通常包含SiLU负值（约-0.278）和正激活峰值；Detect score分支的Inlier activation是负logits，u8 asymmetric zero-point会饱和到255，提示后续score分支更适合使用symmetric int8或在输出拆分/sigmoid后单独处理。
 - 基于Inlier activation样本的symmetric int8 scale grid-search微调已完成。常规层相对MinMax scale通常更小，Inlier重建MSE下降明显；这说明只围绕Inlier范围优化量化分辨率是有效的。该实现目前是重建误差近似，不是论文完整的Hessian/Fisher优化。
+- diagonal-Fisher近似scale微调已完成。实现中使用GVSS saliency平方作为每个空间位置的Fisher proxy，仅对EM-GMM判定的Inlier激活加权，并对log(scale)使用Adam迭代优化weighted reconstruction MSE。该方法不是完整Hessian矩阵，但已经补齐Phase 2中“对角Fisher近似 + 梯度下降更新scale”的可运行版本。
+- 已生成Phase 3可消费的统一量化配置 `outputs/quant/inlierq_quant_config.json`。该配置优先采用Fisher-refined symmetric int8 activation scale，保留grid-search scale、u8 asymmetric参数和per-channel symmetric参考参数；Detect score logits层继续选择symmetric int8，避免u8 zero-point饱和到255。
+- Phase 3的ONNX导出和RKNN build属于当前管线中最吃CPU/内存的步骤。已按用户要求只实现脚本和轻量dry-run，不在Codex中执行重导出/转换。运行指令集中记录在 `plan/phase3_runbook.md`。
+- `fake_quantize.py`的轻量dry-run已验证：13个Phase 2配置层全部找到并包装，126个Conv2d权重完成per-channel symmetric fake quant，一次dummy forward正常。需要注意：真正导出后必须用 `check_onnx_qdq.py` 确认ONNX里存在QuantizeLinear/DequantizeLinear节点；若节点数量为0，不能进入RKNN转换。
+- 当前 `yolo26` 环境缺少ONNX检查相关依赖（`onnx/onnxruntime/tqdm`），而 `rknn` 环境已有 `rknn/onnx/tqdm`。因此建议在运行Phase 3导出前先给 `yolo26` 安装 `onnx onnxruntime tqdm`。
+- 用户实际导出的 `outputs/onnx/spacer_640_inlierq_qdq.onnx` 已通过ONNX checker，包含10个QuantizeLinear和10个DequantizeLinear节点。当前Q/DQ节点覆盖backbone/neck的10个block-level层；Detect score层 `model.23.cv3.*` 没有出现在Ultralytics导出的Q/DQ节点中，这说明Ultralytics export路径可能没有保留这些wrapper，后续若RKNN精度不理想，需要考虑torch export后端或对ONNX图做显式Q/DQ插入。
+- RKNN转换失败并非Q/DQ节点错误，而是工具链兼容问题：rknn-toolkit2 2.3.2内部依赖旧版 `onnx.mapping`，但当前 `rknn` 环境ONNX 1.21只保留 `onnx._mapping`。已在 `convert_qdq_rknn.py` 中添加脚本级compat shim，补回 `TENSOR_TYPE_TO_NP_TYPE` 与 `NP_TYPE_TO_TENSOR_TYPE`；若后续仍失败，建议将 `rknn` 环境ONNX降级到1.14.1。
+- RKNN在加载QAT/QDQ模型时提示 `optimization_level=3` 的部分优化可能影响精度。为避免优化pass破坏Q/DQ精度，建议先用 `optimization_level=2` 生成保守版本，再额外跑level 3做性能/精度对比。
+- Phase 3已实际转换成功，得到两个InlierQ RKNN模型：`spacer_640_inlierq_opt2.rknn` 和 `spacer_640_inlierq.rknn`。opt2文件更大，预期更保守；opt3文件更小，预期速度/图优化更强但精度需实测确认。
+- 用户提供的 `eval/rknn-infer-test.py` 可以作为Phase 4统一评测基础，但原版本会误解InlierQ导出的postprocessed `[1,300,6]` 输出。已补充分支：postprocessed输出按 `xyxy, score, class` 解码，raw/split输出继续按YOLO raw head解码。Phase 4评测时应对InlierQ模型使用 `--output-format postprocessed` 或默认 `auto`，对baseline split模型使用 `--output-format raw` 或默认 `auto`。
+- 四模型RK3588实测已完成，结果见 `eval/ModelComparisonResults.xlsx`。InlierQ取得最高精度：`mAP@0.5=0.9937`、`mAP@0.5:0.95=0.6596`，但FPS仅`17.04`。相比未量化baseline的`mAP@0.5:0.95=0.6483`，相对提升约`1.74%`；相比`int8_split_baseline`的`FPS=36.15`，速度下降约`52.86%`。当前部署收益不划算。
+- 对当前单类别spacer检测任务，InlierQ优势没有充分体现。可能原因包括：任务为单类别且模型本身精度已高、异常值/背景对量化误差的破坏不够强、当前Q/DQ导出只保留了backbone/neck 10个block-level Q/DQ而没有覆盖Detect分支、InlierQ模型走postprocessed输出路径而baseline走split raw输出路径。若继续研究，建议优先做Detect分支显式ONNX Q/DQ插入、raw split输出一致化、多类别/更复杂背景任务验证。
 
 ### 5.3 输出拆分
 InlierQ在PyTorch侧处理最后输出层时，可能遇到与baseline相同的问题（box/score范围差异）。
@@ -189,8 +201,9 @@ D:/Study/rh/2026_05/paper/inlierq_rknn/
 │   ├── em_gmm.py            # EM-GMM聚类模块
 │   └── inlier_optimizer.py  # Inlier-aware Hessian引导量化优化
 ├── quantize/
+│   ├── export_quant_config.py # 汇总Phase 2量化参数，生成Phase 3统一配置
 │   ├── fake_quantize.py     # PyTorch FakeQuantize插入 + 导出
-│   └── export_onnx_qdq.py   # ONNX Q/DQ导出脚本
+│   └── check_onnx_qdq.py    # ONNX Q/DQ节点检查脚本
 ├── rknn/
 │   ├── convert_qdq_rknn.py  # Q/DQ ONNX → RKNN转换
 │   └── eval_rk3588.py       # RK3588评测脚本
